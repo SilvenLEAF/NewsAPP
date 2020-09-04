@@ -1,0 +1,11 @@
+
+########################################
+#      GETTING THE TOP HEADLINES       #
+########################################
+
+GET http://localhost:5000/news HTTP/1.1
+Content-Type: application/json
+
+{
+  "country": "au"
+}

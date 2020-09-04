@@ -1,0 +1,30 @@
+{
+  "name": "newsapp",
+  "version": "1.0.0",
+  "description": "A News APP that gives you the top news around the world summarizing in short",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilvenLEAF/NewsAPP.git"
+  },
+  "keywords": [
+    "NEWS"
+  ],
+  "author": "SilvenLEAF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilvenLEAF/NewsAPP/issues"
+  },
+  "homepage": "https://github.com/SilvenLEAF/NewsAPP#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "newsapi": "^2.4.1"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0"
+  }
+}
