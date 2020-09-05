@@ -3,6 +3,7 @@ import '../../styles/Home.scss'
 import React from 'react'
 
 import Header from './Header'
+import Slider from './Slider'
 import Category from './Category'
 import VerticalButtons from './VerticalButtons'
 
@@ -20,6 +21,11 @@ function Home() {
 
       <div id="myVerticalButtonsHolder">
         <VerticalButtons/>
+      </div>
+
+
+      <div id="mySliderHolder">
+        <Slider/>
       </div>
 
 

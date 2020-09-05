@@ -1,0 +1,22 @@
+.myNewsPlate {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;  
+  width: 250px;
+  height: 450px;
+  // background: red;
+
+  .myNewsTitle {
+    margin: 0;
+    padding: 10px;
+    font-size: 120%;
+  }
+
+  p {
+    padding: 10px;
+    text-align: justify;
+  }
+}
