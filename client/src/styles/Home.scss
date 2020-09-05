@@ -1,0 +1,91 @@
+$backgroundDivBG: rgba($color: #000, $alpha: 0.07);
+
+.myHomePage {
+  position: relative;
+}
+
+.myBackgroundDiv {
+  width: 60vw;
+  height: 75vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: $backgroundDivBG;
+}
+
+
+
+#myHeaderHolder {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  background-color: red;
+
+  // display: flex;
+  // align-items: center;
+  
+
+  
+  .myHeaderTitle {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+  }
+
+    .mySearch {
+      position: fixed;
+      top: 50px;
+      right: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 120%;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: $backgroundDivBG;
+    }
+
+
+}
+
+
+
+#myVerticalButtonsHolder {
+  display: flex;
+  justify-content: space-around;
+  transform: rotateZ(270deg);
+  transform-origin: 0 0;
+
+  position: fixed;
+  left: 10px;
+  bottom: 150px;
+
+  // background-color: orchid;
+
+  div {
+    margin: 15px;
+    font-size: 120%;    
+  }
+}
+
+
+#myCategoriesHolder {
+  display: flex;
+  overflow: auto;
+
+  position: fixed;
+  bottom: 90px;
+  left: 0;
+  right: 0px;
+
+  div {
+    margin: 10px;
+    padding: 10px 20px;    
+    border-radius: 10px;
+    background-color: $backgroundDivBG;
+  }
+}
