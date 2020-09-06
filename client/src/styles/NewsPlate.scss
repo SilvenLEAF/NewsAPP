@@ -8,15 +8,64 @@
   width: 250px;
   height: 450px;
   // background: red;
+  position: relative;
+
+  color: #fff;
+  text-shadow: 6px 6px 6px #000;
+  
+
+  .myNewsImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    filter: blur(2px);
+
+    &:after {
+      display: block;
+      content: "";
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 100%;
+
+      background-color: rgba($color: #000, $alpha: 0.5)
+    }
+  }
+
+  h6 {
+    margin: 10px;
+    margin-bottom: 0;
+    font-size: 120%;
+    font-weight: 600;
+    
+    div{
+      margin: 0;
+    }
+  }
 
   .myNewsTitle {
-    margin: 0;
-    padding: 10px;
-    font-size: 120%;
+    margin: 10px;
+    margin-top: 0;
+    font-size: 150%;
+    font-weight: 600;
+
+    color: red;        
   }
 
   p {
-    padding: 10px;
+    margin: 10px;
     text-align: justify;
+    text-indent: 50px;
+
+    color: #fff;
+    font-size: 130%;    
   }
 }

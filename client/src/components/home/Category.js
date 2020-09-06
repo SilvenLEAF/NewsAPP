@@ -1,15 +1,15 @@
 import React from 'react'
 
-function Category() {
+function Category({ category, setCategory }) {
   return (
     <>
-      <div>General</div> 
-      <div>Technology</div> 
-      <div>Science</div> 
-      <div>Health</div> 
-      <div>Sports</div> 
-      <div>Entertainment</div> 
-      <div>Business</div> 
+      <div onClick={ ()=>{ setCategory('') } } >All</div> 
+      <div onClick={ ()=>{ setCategory('technology') } } >Technology</div> 
+      <div onClick={ ()=>{ setCategory('science') } } >Science</div> 
+      <div onClick={ ()=>{ setCategory('health') } } >Health</div> 
+      <div onClick={ ()=>{ setCategory('sports') } } >Sports</div> 
+      <div onClick={ ()=>{ setCategory('entertainment') } } >Entertainment</div> 
+      <div onClick={ ()=>{ setCategory('business') } } >Business</div> 
     </>
   )
 }

@@ -4,6 +4,8 @@
   "description": "A News APP that gives you the top news around the world summarizing in short",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

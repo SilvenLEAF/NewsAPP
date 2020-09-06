@@ -2,6 +2,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { ReactQueryDevtools } from 'react-query-devtools'
 
 
 import FooterNav from './components/layouts/FooterNav';
@@ -51,7 +52,7 @@ function App() {
 
 
       </div>
-
+      <ReactQueryDevtools initialIsOpen={ false} />
 
 
 

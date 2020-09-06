@@ -1,16 +1,28 @@
 import '../../styles/NewsPlate.scss'
 
 import React from 'react'
+import moment from 'moment'
 
-function NewsPlate() {
+function NewsPlate({ item }) {
   return (
     <div className="myNewsPlate">
+
+      <div className="myNewsImage" style={{background: `url(${ item.urlToImage }) center/cover` }} ></div>
       <div>
-
-
-        <h5 className="myNewsTitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, fugiat. A cupiditate repellat magnam itaque distinctio illo! Quam, minima a </h5>
+        
+        <h6>
+          <div>
+            { item.author }
+          </div> 
+          <div>
+            { moment(item.publishedAt).calendar() }
+          </div>
+        </h6>
+        <h5 className="myNewsTitle"> { item && item.title && item.title} </h5>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus placeat commodi dolor, magnam sed vero facilis corrupti maiores tenetur debitis! Numquam voluptatem dignissimos soluta laudantium.
+          { item && item.description && (
+            item.description.length > 125 ? item.description.slice(0, 125) + '. . .' : item.description
+          ) }
         </p>
 
 

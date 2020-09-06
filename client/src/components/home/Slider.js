@@ -25,8 +25,7 @@ import 'swiper/components/pagination/pagination.scss'
 
 SwiperCore.use([EffectCoverflow, Controller, Navigation, Pagination, Scrollbar, Autoplay]);
 
-function Slider() {
-  const [newsInfo, setNewsInfo] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+function Slider({ resolvedData }) {
   
   const [controlledSwiper, setControlledSwiper] = useState(null)
   
@@ -40,7 +39,7 @@ function Slider() {
         controller={{ control: controlledSwiper}}
         slidesPerView={1}
         loop={true}
-        autoplay={{ delay: 2000, reverseDirection: false, disableOnInteraction: false }}            
+        autoplay={{ delay: 2000, reverseDirection: false, disableOnInteraction: true }}            
         navigation
         pagination={{ clickable: true }}
         onSwiper={setControlledSwiper}      
@@ -48,11 +47,11 @@ function Slider() {
         
       >     
       {
-        newsInfo.map((item, index)=>{
+        resolvedData && resolvedData[0] && resolvedData.map((item, index)=>{
           return (
             <SwiperSlide key={index} >
-              <NewsPlate/>
-          </SwiperSlide>
+              <NewsPlate item={ item } />
+            </SwiperSlide>
           )
         })
 
