@@ -13,6 +13,9 @@ function FooterNav() {
   return (
     <div className="container">
 
+
+
+
       <Link to="/">
         <div>
           <div className="myFooterIcons fa fa-home"></div>
@@ -24,7 +27,7 @@ function FooterNav() {
     
 
 
-      <Link to="/">
+      <Link to="/user">
         <div>
           <div className="myFooterIcons fa fa-user"></div>
           <div className="myFooterNameTag">
@@ -35,11 +38,11 @@ function FooterNav() {
 
 
 
-      <Link to="/">
+      <Link to="/bookmarks">
         <div>
           <div className="myFooterIcons fa fa-bookmark"></div>
           <div className="myFooterNameTag">
-            Bookmark
+            Bookmarks
           </div>
         </div>
       </Link>
@@ -47,14 +50,19 @@ function FooterNav() {
 
 
 
-      <Link to="/">
-        <div>
-          <div className="myFooterIcons fa fa-list"></div>
-          <div className="myFooterNameTag">
-            Menu
-          </div>
+      
+
+      <div className="sidenav-trigger" data-target="mobileNav" >
+        <div className="myFooterIcons fa fa-list"></div>
+        <div className="myFooterNameTag">
+          Menu
         </div>
-      </Link>
+      </div>
+
+  
+
+
+
 
 
 

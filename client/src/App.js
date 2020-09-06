@@ -7,7 +7,12 @@ import { ReactQueryDevtools } from 'react-query-devtools'
 
 import FooterNav from './components/layouts/FooterNav';
 
+import Navbar from './components/layouts/Navbar'
+
 import Home from './components/home/Home'
+import User from './components/user/User'
+import Bookmarks from './components/bookmarks/Bookmarks'
+
 
 
 
@@ -26,13 +31,23 @@ function App() {
 
 
       <div className="App">
+        <Navbar/>
         <div id="myWrapper">
 
+
+
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home/>
             </Route>
 
+            <Route path="/user">
+              <User/>
+            </Route>
+
+            <Route path="/bookmarks">
+              <Bookmarks/>
+            </Route>
 
 
 

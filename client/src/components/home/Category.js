@@ -4,6 +4,7 @@ function Category({ category, setCategory }) {
   return (
     <>
       <div onClick={ ()=>{ setCategory('') } } >All</div> 
+      <div onClick={ ()=>{ setCategory('general') } } >General</div> 
       <div onClick={ ()=>{ setCategory('technology') } } >Technology</div> 
       <div onClick={ ()=>{ setCategory('science') } } >Science</div> 
       <div onClick={ ()=>{ setCategory('health') } } >Health</div> 

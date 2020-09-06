@@ -9,6 +9,7 @@
   .container{
     display: flex;
     justify-content: space-between;
+    
 
     div{
       display: block;
@@ -25,11 +26,34 @@
         text-align: center;
         font-size: 70%;
         color: #666;
+        text-align: center;
+      }      
+
+      .fa.fa-bookmark {
+        position: relative;
+        left: 8px;
       }
 
-
-
     }
+
+    
+    .sidenav-trigger {
+      .myFooterIcons {
+        position: relative;
+        top: -10px;
+      }
+
+      .myFooterNameTag {
+        position: relative;
+        top: 5px;
+        left: -1px;
+      }
+    }
+
+
     
   }
 }
+
+
+

@@ -81,7 +81,7 @@ function Home() {
   })
 
 
-  const [category, setCategory] = useState('')
+  const [category, setCategory] = useState('general')
   const [country, setCountry] = useState('');
   const [query, setQuery] = useState('');
 

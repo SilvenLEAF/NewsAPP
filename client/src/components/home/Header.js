@@ -39,7 +39,7 @@ function Header({ category, setCategory, query, setQuery, country, setCountry })
 
 
 
-      <input id="mySearchInput" type="text" value={ formQuery } onChange={ e => setFormQuery(e.target.value) } />
+      <input id="mySearchInput" type="text" value={ formQuery } onChange={ e => setFormQuery(e.target.value) } placeholder="search" />
       <button type="submit" className="mySearchBtn"><i className="material-icons">search</i></button>
 
       </form>
