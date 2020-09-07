@@ -1,4 +1,4 @@
-$backgroundDivBG: rgba($color: #000, $alpha: 0.07);
+$backgroundDivBG: rgba($color: #f00, $alpha: 0.1);
 
 .myHomePage {
   position: relative;
@@ -38,7 +38,16 @@ $backgroundDivBG: rgba($color: #000, $alpha: 0.07);
 
     display: flex;
 
-    
+    // dropdown default color overriding
+    ul.dropdown-content.select-dropdown li span {
+      color: #500;
+    }
+
+    input[type=text]:focus {
+      border-bottom: 1px solid #a00;
+      box-shadow: 0 1px 0 0 red;
+    }
+
     input {
       width: 100px;
       text-align: center;
@@ -88,7 +97,12 @@ $backgroundDivBG: rgba($color: #000, $alpha: 0.07);
 
   div {
     margin: 15px;
-    font-size: 120%;    
+    font-size: 120%;
+    
+    &:hover {
+      font-weight: 1000;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -108,6 +122,13 @@ $backgroundDivBG: rgba($color: #000, $alpha: 0.07);
     padding: 10px 20px;    
     border-radius: 10px;
     background-color: $backgroundDivBG;
+    
+
+
+    &:hover {
+      background-color: #d00;
+      color: #fff;
+    }
   }
 }
 

@@ -48,7 +48,7 @@ const getNews = async (category, country, query)=>{
   }
 
 
-  const getNewsInfoRes = await fetch('http://localhost:5000/news', {
+  const getNewsInfoRes = await fetch('/news', {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
