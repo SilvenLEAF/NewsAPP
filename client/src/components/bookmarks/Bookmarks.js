@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 function Bookmarks() {
   useEffect(()=>{
     M.AutoInit();
-  })
+  }, [])
 
 
 

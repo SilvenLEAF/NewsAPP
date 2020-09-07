@@ -11,12 +11,7 @@ function NewsPlate({ item }) {
       <div>
         
         <h6>
-          <div>
-            { item.author }
-          </div> 
-          <div>
-            { moment(item.publishedAt).calendar() }
-          </div>
+            { moment(item.publishedAt).calendar() }          
         </h6>
         <h5 className="myNewsTitle"> { item && item.title && item.title} </h5>
         <p>

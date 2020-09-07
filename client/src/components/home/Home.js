@@ -48,7 +48,7 @@ const getNews = async (category, country, query)=>{
   }
 
 
-  const getNewsInfoRes = await fetch('/news', {
+  const getNewsInfoRes = await fetch('http://localhost:5000/news', {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -57,6 +57,11 @@ const getNews = async (category, country, query)=>{
   });
 
   const getNewsInfoData = await getNewsInfoRes.json();
+
+  console.log("CATEGORY------", category)
+  console.log("COUNTRY------", country)
+  console.log("QUERY------", query)
+
   console.log("GETNEWSINFODATA--------", getNewsInfoData)
   return getNewsInfoData;
 
@@ -78,10 +83,10 @@ const getNews = async (category, country, query)=>{
 function Home() {
   useEffect(()=>{
     M.AutoInit()
-  })
+  }, [])
 
 
-  const [category, setCategory] = useState('general')
+  const [category, setCategory] = useState('')
   const [country, setCountry] = useState('');
   const [query, setQuery] = useState('');
 
@@ -95,11 +100,11 @@ function Home() {
       <div className="myBackgroundDiv"></div>
 
       <div id="myHeaderHolder">
-        <Header category={ category } setCategory={ setCategory } query={ query } setQuery={ setQuery } country={ country } setCountry={ setCountry } />
+        <Header setQuery={ setQuery } setCountry={ setCountry } />
       </div>
 
       <div id="myVerticalButtonsHolder">
-        <VerticalButtons/>
+        <VerticalButtons setCategory={ setCategory } />
       </div>
 
 
@@ -109,7 +114,7 @@ function Home() {
 
 
       <div id="myCategoriesHolder">
-        <Category category={ category } setCategory={ setCategory } />
+        <Category setCategory={ setCategory } />
       </div>
     </div>
   )

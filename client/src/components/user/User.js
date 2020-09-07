@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 function User() {
   useEffect(()=>{
     M.AutoInit();
-  })
+  }, [])
 
 
 

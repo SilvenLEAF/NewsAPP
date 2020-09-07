@@ -1,21 +1,15 @@
 import React, { useState } from 'react'
 
-function Header({ category, setCategory, query, setQuery, country, setCountry }) {
+function Header({ query, setQuery, country, setCountry }) {
     
     const [formQuery, setFormQuery] = useState('')
-    const [formCountry, setFormCountry] = useState('')
+    
     
 
     const handleSubmit = (e) =>{
       e.preventDefault();
-
       setQuery(formQuery)
-      setCountry(formCountry)
 
-
-      console.log("CATEGORY------", category)
-      console.log("COUNTRY------", country)
-      console.log("QUERY------", query)
 
       setFormQuery('')
     }
@@ -29,7 +23,7 @@ function Header({ category, setCategory, query, setQuery, country, setCountry })
 
       <form className="mySearchForm" onSubmit={ handleSubmit } >
       
-      <select id="mySearchCountry" value={ formCountry } onChange={ e => setFormCountry(e.target.value) } >
+      <select id="mySearchCountry" value={ country } onChange={ e => setCountry(e.target.value) } >
         <option value="" >None</option>
         <option value="France" >France</option>
         <option value="China" >China</option>
